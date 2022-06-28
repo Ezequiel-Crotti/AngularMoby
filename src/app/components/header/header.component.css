@@ -1,0 +1,19 @@
+#main-header {
+	background: #333;
+	color: white;
+	height: 80px;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}	
+#main-header a {
+	color: white;
+}
+#login{
+    color: rgb(67, 57, 206);
+    width: 100px;
+    height: 40px;
+    font-size:20px;
+    margin-right: 10px;
+}

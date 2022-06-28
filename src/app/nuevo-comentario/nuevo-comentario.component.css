@@ -1,0 +1,23 @@
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.div-comentario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.div-email{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.div-nombre{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}

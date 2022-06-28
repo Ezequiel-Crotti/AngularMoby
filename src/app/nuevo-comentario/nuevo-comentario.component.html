@@ -1,0 +1,40 @@
+
+<div class="contenido">
+    <div>
+        <p>Nuevo Comentario</p>
+    </div>
+    <form [formGroup]="formularioComentario" (ngSubmit)="submit()">
+        <div>
+            <div class="div-nombre">
+                <label>Nombre: </label>
+                <input type="text" formControlName="nombre" id="" [(ngModel)]="nombre" required>
+                <span *ngIf="this.formularioComentario.get('nombre')?.errors?.['required']">
+                    *Campo nombre requerido
+                </span>
+            </div>
+            <div class="div-email">
+                <label>Email: </label>
+                <input type="email" formControlName="email" id="" [(ngModel)]="email" required>
+                <span *ngIf="this.formularioComentario.get('email')?.errors?.['required']">
+                    *Campo email requerido
+                </span>
+                <span *ngIf="this.formularioComentario.get('email')?.errors?.['email']">
+                    *Email Inválido
+                </span>
+            </div>
+            <div class="div-comentario">
+                <label>Comentario </label>
+                <textarea formControlName="comentario" id="" cols="30" rows="10" [(ngModel)]="comentario" required></textarea>
+                <span *ngIf="this.formularioComentario.get('comentario')?.errors?.['required']">
+                    *Campo comentario requerido
+                </span>
+                <span *ngIf="this.formularioComentario.get('comentario')?.errors?.['maxlength']">
+                    *Debe tener como máximo 500 caracteres
+                </span>
+            </div>
+        </div>
+        <div>
+            <button type="submit">Agregar</button>
+        </div>
+    </form>
+</div>

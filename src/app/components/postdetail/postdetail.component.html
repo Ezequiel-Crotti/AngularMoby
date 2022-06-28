@@ -1,0 +1,28 @@
+
+<div class="content">
+    <div class="div-post">
+        <h1 id="post">Detalle post: {{id}} </h1>
+        <p id="fecha"> Last coment: {{fecha}} </p>
+    </div>
+    <div class="div-titulo">
+        <h3>
+            {{resulDetalleTitulo}}
+        </h3>
+    </div>
+    <div class="div-body">
+        <p>
+            {{resulDetalleBody}}
+        </p>
+    </div>
+    <div class="div-comentario">
+        <app-post-comentario (messageEvent)="receiveMessage($event)"></app-post-comentario>
+    </div>
+
+    <app-nuevo-comentario></app-nuevo-comentario>
+</div>
+
+<div>
+    <nav>
+        <a routerLink="/posts">volver</a>
+    </nav>
+</div>

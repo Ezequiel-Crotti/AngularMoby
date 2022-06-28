@@ -1,0 +1,14 @@
+<div class="contenedor">
+  <div>
+    <th> <h3>Comentarios</h3> </th>
+  </div>
+  <div>
+    <div *ngFor="let detalle of resulComentPost">
+      <p>Nombre: {{detalle.name}}</p>
+      <p>Comentario: {{detalle.body}}</p>
+    </div>
+  </div>
+  <div>
+    <button (click)="EnviarFecha()">Emitir</button>
+  </div>
+</div>

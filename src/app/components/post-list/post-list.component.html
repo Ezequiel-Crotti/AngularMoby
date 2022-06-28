@@ -1,0 +1,24 @@
+
+<div class="contenedor">
+    <h1>List Post</h1>
+    <table >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Post</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of resultados">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>
+                <nav>
+                    <a routerLink="/post" (click)="detalle(post.id)">Ver Detalle</a>
+                </nav>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
